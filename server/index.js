@@ -9,7 +9,13 @@ const morgan = require("morgan")
 require('dotenv').config()
 
 // middleware
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true
+  }
+));
 app.use(express.json());
 app.use(morgan("dev"))
 
