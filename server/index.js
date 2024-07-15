@@ -11,7 +11,7 @@ require('dotenv').config()
 // middleware
 app.use(cors(
   {
-    origin: ["https://deploy-mern-1whq.vercel.app"],
+    origin: ["deploy-mern-api-amber.vercel.app"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true
   }
